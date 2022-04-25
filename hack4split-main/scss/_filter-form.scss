@@ -1,0 +1,73 @@
+.filter-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	.button {
+		margin-left: 0;
+
+		@media ( min-width: 1200px ) {
+			margin-left: 10px;
+		}
+	}
+}
+
+.filter-form__main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+
+	.position-relative + .position-relative {
+		margin-left: 10;
+
+		@media ( min-width: 510px ) {
+			margin-left: 15px;
+		}
+	}
+}
+
+.filter-form__item {
+	font-size: 18px;
+	border: 1px solid #e7e7e9;
+	color: #6e6d7a;
+	border-radius: 8px;
+	-webkit-appearance: none;
+	transition: .3s;
+	padding-top: 12px;
+	padding-right: 40px;
+	padding-bottom: 12px;
+	padding-left: 18px;
+	margin-bottom: 15px;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:hover {
+		border-color: $blue;
+	}
+}
+
+.filter-form__item--mb-none {
+	margin-bottom: 0;
+}
+
+.input-datalist {
+	padding-right: 10px;
+
+	&::-webkit-calendar-picker-indicator {
+		opacity: 0;
+	}
+}
+
+.input-icon {
+	height: 20px;
+	width: 20px;
+	fill: $gray-light;
+	transition: .3s;
+	pointer-events: none;
+	position: absolute;
+	top: 15px;
+	right: 10px;
+}

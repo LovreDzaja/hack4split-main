@@ -1,0 +1,106 @@
+.button {
+	border-radius: 8px;
+	font-size: 20px;
+	cursor: pointer;
+	transition: .3s;
+	padding-top: 14px;
+	padding-right: 30px;
+	padding-bottom: 14px;
+	padding-left: 30px;
+	
+	&:hover {
+		color: $orange;
+	}
+}
+
+.button--sm {
+	font-size: 16px;
+	padding-top: 10px;
+	padding-right: 14px;
+	padding-bottom: 10px;
+	padding-left: 14px;
+}
+
+.button--with-text {
+	font-size: 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fff;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #808080;
+	border-radius: 18px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+	div {
+		background-color: $blue;
+		color: #fff;
+		border-radius: 10px;
+		padding-top: 10px;
+		padding-right: 15px;
+		padding-bottom: 10px;
+		padding-left: 15px;
+	}
+}
+
+.button--filled {
+	border: 0;
+	transition: .3s;
+	background-color: $blue;
+	color: #fff;
+
+	&:hover {
+		background-color: $blue-hover;
+		color: #fff;
+	}
+}
+
+.button--borders {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.button--orange {
+	background-color: $orange;
+
+	&:hover {
+		background-color: $orange-hover;
+	}
+}
+
+.button--red {
+	background-color: $red;
+
+	&:hover {
+		background-color: $red-hover;
+	}
+}
+
+.button--xl {
+	display: flex;
+	justify-content: center;
+	padding-right: 0;
+	padding-left: 0;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+
+.button--mt-sm {
+	margin-top: 20px;
+}
+
+.button--ml-sm {
+	margin-left: 10px;
+}
+
+.button--mr-ml-none {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.button--mb-sm {
+	margin-bottom: 20px;
+}

@@ -1,0 +1,153 @@
+.white-pop-up {
+	position: relative;
+	background: #fff;
+	border-radius: 13px;
+	padding-top: 50px;
+	padding-right: 40px;
+	padding-bottom: 50px;
+	padding-left: 40px;
+	width: auto;
+	max-width: 500px;
+	margin: 20px auto;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 160px;
+		width: 100%;
+		background-color: $blue;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 20%;
+
+		@media ( min-width: 768px ) {
+			height: 200px;
+		}
+	}
+
+	.title, .white-pop-up__main * {
+		z-index: 1;
+	}
+}
+
+.white-pop-up--before--sm {
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 130px;
+		width: 100%;
+		background-color: $blue;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 20%;
+
+		@media ( min-width: 768px ) {
+			height: 150px;
+		}
+	}
+}
+
+.white-pop-up--bg-img {
+	padding-top: 90px;
+
+	&::before {
+		display: none;
+	}
+}
+
+.white-pop-up--title-lg {
+	.title {
+		font-size: 32px;
+
+		@media ( min-width: 768px ) {
+			font-size: 48px;
+		}
+	}
+}
+
+.white-pop-up--no-before {
+	text-align: center;
+
+	&::before {
+		display: none;
+	}
+
+	.mfp-close {
+		color: $gray-light !important;
+	}
+}
+
+.white-pop-up--success {
+	border: 2px solid $green;
+
+	.mfp-close {
+		display: none;
+	}
+}
+
+.white-pop-up--failure {
+	border: 2px solid $red;
+
+	.mfp-close {
+		display: none;
+	}
+}
+
+.white-pop-up--question {
+	border: 2px solid $blue;
+
+	.mfp-close {
+		color: $blue !important;
+	}
+}
+
+.white-pop-up--orange-before::before {
+	background-color: $orange;
+}
+
+.white-pop-up__image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 200px;
+	width: 100%;
+	background-color: $blue;
+	background-position: center;
+	background-size: cover;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 20%;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 200px;
+		width: 100%;
+		background-color: $black-overlay;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 20%;
+	}
+}
+
+.white-pop-up__main {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	margin-bottom: 50px;
+}
+
+.white-pop-up__main--flex-direction-column {
+	flex-direction: column;
+}
+
+.white-pop-up__icon {
+	height: 80px;
+	width: 80px;
+}

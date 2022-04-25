@@ -1,0 +1,40 @@
+.hero__wrapper {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+
+	@media ( max-height: 650px ) {
+		padding-top: 400px;
+		padding-bottom: 250px;
+	}
+}
+
+.hero {
+	position: relative;
+	background-size: cover;
+	background-position: center;
+
+	&::after {
+		content: '';
+		background-color: $black-overlay;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+.hero__inner {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	* {
+		z-index: 1;
+	}
+
+	.button {
+		align-self: baseline;
+	}
+}

@@ -1,0 +1,167 @@
+.form {
+	display: flex;
+	flex-direction: column;
+}
+
+.form__item {
+	position: relative;
+
+	& + .form__item {
+		margin-top: 20px;
+	}
+
+	&.display-flex {
+		flex-direction: column;
+
+		.form__input--md {
+			width: 100%;
+
+			& + .form__input--md {
+				margin-top: 20px;
+			}
+
+			@media ( min-width: 440px ) {
+				width: 50%;
+
+				& + .form__input--md {
+					margin-top: 0;
+				}
+			}
+		}
+
+		@media ( min-width: 440px ) {
+			flex-direction: row;
+		}
+	}
+}
+
+.form__input {
+	width: 100%;
+	font-size: 16px;
+	border: 0;
+	border-bottom: 2px solid $gray-light;
+	color: $gray-dark;
+	transition: .3s;
+	padding-right: 40px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+
+	&:focus {
+		outline: 0;
+		border-color: $blue;
+		color: $blue;
+
+		&::placeholder {
+			color: $blue;
+		}
+	}
+
+	&::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+}
+
+.form__input--orange:focus {
+	border-color: $orange;
+	color: $orange;
+
+	&::placeholder {
+		color: $orange;
+	}
+}
+
+.form__input--md {
+	width: 50%;
+}
+
+.form__input-pr-md {
+	padding-right: 65px;
+}
+
+.form__input--pl-sm {
+	padding-left: 26px;
+}
+
+.form__input--date {
+	position: relative;
+
+	&::-webkit-calendar-picker-indicator {
+		filter: contrast( .1 );
+		position: absolute;
+		left: 0;
+	}
+}
+
+.form__input--textarea {
+	resize: none;
+}
+
+.form__icon {
+	height: 16px;
+	width: 20px;
+	position: absolute;
+	top: 2px;
+	left: -1px;
+	z-index: 3;
+}
+
+.form__icon--second {
+	fill: $gray-light;
+	pointer-events: none;
+	cursor: pointer;
+	height: 20px;
+	right: 10px;
+	left: auto;
+}
+
+.form__icon--third {
+	right: 40px;
+}
+
+.form__icon--tooltip {
+	top: 0;
+	pointer-events: all;
+	transition: .3s;
+
+	&:hover {
+		fill: $orange;
+	}
+}
+
+.form__icon--password-reveal {
+	pointer-events: all;
+	transition: .3s;
+
+	&:hover {
+		stroke: $blue;
+	}
+}
+
+.form__icon--password-reveal-orange {
+	&:hover {
+		stroke: $orange;
+	}
+}
+
+.form__icon--lg {
+	height: 20px;
+}
+
+.form__icon--top {
+	top: 0;
+	bottom: 0;
+}
+
+.form-icon-fill {
+	fill: $gray-light;
+}
+
+.form-icon-stroke {
+	stroke: $gray-light;
+}
+
+.input--invalid {
+	border-color: $red;
+	color: $red;
+}
